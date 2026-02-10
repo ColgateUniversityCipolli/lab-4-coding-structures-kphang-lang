@@ -101,42 +101,110 @@ df <- data.frame(x1 = sample(x=1:10,          # sample from 1, 2, 3, ..., 10
 ## Part b 
 Use the `head(...)` function to peek at the data frame.
 
+**Solution**
+```{r}
+head(df)
+```
+
 ## Part c
 Ask for the column `x1`.
+
+**Solution**
+```{r}
+df[ ,1]
+```
 
 ## Part d
 Ask for the fifth row of the data frame.
 
+**Solution**
+```{r}
+df[5, ]
+```
+
 ## Part e
 Ask for the the value of `x1` in the fifth row of the data frame.
+
+**Solution**
+```{r}
+df[5, 1]
+```
 
 ## Part f
 Ask for the the value of in the third column and the fifth row of the data frame.
 
+**Solution**
+```{r}
+df[5, 3]
+```
+
 ## Part g
 Create a sequence from 1 to 10 by 2 and use it to print the odd rows of the data frame.
+
+**Solution**
+```{r}
+df[0:4*2+1, ]
+```
 
 ## Part h
 Below, I create an empty column called `x12`. Fill in the details of the `for(...)` loop to ensure `x12` is the product of `x1` and `x2`.
 ```{r}
 #| size: "scriptsize"
-n <- nrow(df)                # How many rows to we have to fill?
-df$x12 <- rep(NA, nrow(df))   # Create an empty column for x12
-for(i in 1:nrow(df)){
-  # REPLACE WITH THE NECESSARY CODE
+n <- 10                 # How many rows to we have to fill?
+df$x12 <- rep(NA, 10)   # Create an empty column for x12
+for(i in 1:10){
+ df$x12[i] = df$x1[i]*df$x2[i]
 }
+print(df)
 ```
+
+
 
 ## Part i
 Write a function called `calculate.score(...)` that takes three arguments representing `x1`, `x2`, and `x3`) and returns a single value based on the formula:
 $$Score = (x_1 \times 2) + x_2 - x_3$$
 Use your function to create a new column `total.score` in our data frame `df`.
 
+**Solution**
+```{r}
+#| size: "scriptsize"
+n <- 10                 # How many rows to we have to fill?
+df$total.score <- rep(NA, 10)   # Create an empty column for total.score
+for(i in 1:10){
+  calculate.score = (df$x1[i]*2)+df$x2[i]-df$x3[i]
+  df$total.score[i] = calculate.score
+}
+print(df)
+```
+
 ## Part j
 Create a function called `evaluate.row(...)` that takes one argument and returns "low" when the argument is less than 4, "mid" when the argument is between 4 and 7 (inclusive), and "high" when the arguement is 8 or larger. Then, use `sapply(...)` to apply it to column `x1`.
 
+**Solution**
+
+```{r}
+#| size: "scriptsize"
+evaluate.row = function(n){
+  if (n < 4){
+    return("low")
+  }
+  if (4 <= n & n <= 7){
+    return("mid")
+  }
+  if (n >= 8){
+    return("high")
+  }
+}
+
+
+sapply(df$x1, evaluate.row)
+```
+
 ## Part k
 Did we need to use loops or functions in (h.)-(j.)? That is, can we use vectorization to attain the same results in 1 line each? Where it is possible, write the line of code. Where it is not, explain why.
+
+**Solution**
+
 
 # Complete Tasks for One Recipe
 
@@ -144,10 +212,18 @@ Did we need to use loops or functions in (h.)-(j.)? That is, can we use vectoriz
 
 Install and load the `rvest` package [@rvest].
 
+
 ## Part b
 
 Load the html of the `website/KimchiGrilledCheese.html` using the `read_html()` function. We will use the Kimchi Grilled Cheese recipe as our prototype and extend this workflow to all recipes, so try to be as general as possible. If you do look at it, you'll notice it contains the html we saw in the developer tools in class.<br/>
 **Hint**: You can use `read_html(...)` like `read.csv(...)`. Don't forget you can use the documentation to help use it.
+
+**Solution** 
+```{r}
+library("rvest")
+recipe.item = read_html("website/KimchiGrilledCheese.html")
+```
+
 
 ## Part c
 
@@ -156,23 +232,56 @@ Open the html file in a web browser and open developer tools. In chrome-based br
 Find the name of the Ingredients section of the website and pull the HTML of the function using `html_element(...)` and save the results to an object called `ingredients.section`. <br/>
 **Hint**: You can ask for elements by id using a preceeding "\#". See `?html_element(...)` for a helpful example. 
 
+**Solution**
+```{r}
+ingredients.section = html_element(recipe.item, "#ingredients")
+```
+
+
 ## Part d
 Now, we want to obtain all of the itemized items. Find the element type the individual ingredients and pull all of them from `ingredients.section` using `html_elements(...)` (note the added s) and save the results to an object called `ingredients`.<br/>
 **Hint**: You can ask for elements by type by simply specifying the tag (e.g., "p" for paragraph). See `?html_element for a helpful example.
 
+**Solution**
+```{r}
+ingredients = html_elements(ingredients.section, "li")
+```
+
 ## Part e
 Similar to Part c. Find the name of the Instructions section of the website and pull the HTML of the function using `html_element(...)` and save the results to an object called `instructions.section`.<br/>
 
+**Solution**
+```{r}
+instructions.section = html_element(recipe.item, "#instructions")
+```
+
+
 ## Part f
 Now, we want to obtain all of the enumerated items. Find the element type the individual instructions and pull all of them from `instructions.section` using `html_elements(...)` (note the added s) and save the results to an object called `instructions`.
+
+**Solution**
+```{r}
+instructions = html_element(instructions.section, "li")
+```
 
 ## Part g
 Find the class of the recipe image and pull the HTML using `html_element(...)` and save the results to an object called `image.element`. <br/>
 **Hint**: You can ask for elements by class using a preceeding ".". See `?html_element(...)` for a helpful example. Further, note that HTML elements may have more than one class (separated by a space). When that is the case, you need to choose one.
 
+**Solution**
+```{r}
+image.element = html_element(recipe.item, ".figure-img")
+```
+
 ## Part h
 Use the `html_attr(...)` function to pull the source link ("src"). Then, use `paste(...)` to prepend the source link with "website/" so we have the full link.<br/>
 **Note**: This would be like adding "https://www.website.com" to get the absolute link.
+
+**Solution**
+```{r}
+image.url <- html_attr(image.element, "src")
+image.url <- paste("website/", image.url)
+```
 
 ## Part i
 Now that we have all the things we need, let's try to print the recipe. Below, I have written code to print from the objects. One by one, remove `#| eval: false` from the YAML header and add `#| echo: false` and `#| results: 'asis'`, and test. Let me know if you're stuck!
