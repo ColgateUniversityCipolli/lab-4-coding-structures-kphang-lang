@@ -80,6 +80,11 @@ x <- sample(x=1:10,          # sample from 1, 2, 3, ..., 10
             replace = TRUE)  # allowed to sample the same item multiple times
 ```
 
+**Solution** 
+```{r}
+(x[3])
+```
+
 ## Part b
 
 Below, I create a data frame filled with random observations.
@@ -287,7 +292,7 @@ Now, we want to obtain all of the enumerated items. Find the element type the in
 
 **Solution**
 ```{r}
-instructions = html_element(instructions.section, "li")
+instructions = html_elements(instructions.section, "li")
 ```
 
 ## Part g
@@ -305,8 +310,8 @@ Use the `html_attr(...)` function to pull the source link ("src"). Then, use `pa
 
 **Solution**
 ```{r}
-image.url <- html_attr(image.element, "src")
-(image.url <- paste("website/", image.url, sep = ""))
+image.url = html_attr(image.element, "src")
+image.url = paste("website/", image.url, sep = "")
 ```
 
 ## Part i
@@ -336,7 +341,7 @@ cat(formatted_list, sep = "\n")
 #| echo: false
 #| results: 'asis'
 formatted_list <- paste("1.", html_text(instructions))
-cat(formatted_list, sep = "\n") # something is wrong here
+cat(formatted_list, sep = "\n") 
 ```
 
 # Complete a Full Menu!
@@ -349,6 +354,206 @@ Open `Menu.qmd` and add code to complete the following.
 4. Print the image, ingredients, and instructions for each receipe on the subsequent pages.
 
 When you render this document, no code should be visible. Instead, you should see a five-page document as described above.
+
+**Solution**
+```{r}
+#| echo: false
+breakfasts = c("website/BerryMelonSmoothie.html",
+                "website/BiscuitsAndGravy.html",
+                "website/BreakfastCheesecake.html",
+                "website/BreakfastMuffins.html",
+                "website/ChiaParfait.html",
+                "website/GardenTomatoQuiche.html",
+                "website/OvernightOats.html",
+                "website/PumpkinToast.html",
+                "website/TropicalSmoothie.html")
+dinner = c("website/AfricanPeanutSoup.html",
+            "website/Alfredo.html",
+            "website/ArugulaPasta.html",
+            "website/AutumnGrainBowl.html",
+            "website/BakedZiti.html",
+            "website/BBQChili.html",
+            "website/Bibimbap.html",
+            "website/BLTSalad.html",
+            "website/Burgers.html",
+            "website/CapreseSandwiches.html",
+            "website/EggplantParmesan.html",
+            "website/Enchiladas.html",
+            "website/FloridaRolls.html",
+            "website/KimchiGrilledCheese.html",
+            "website/Lasagna.html",
+            "website/LatinBowl.html",
+            "website/Meatloaf.html",
+            "website/PadThai.html",
+            "website/PastaAndPeas.html",
+            "website/Pizza.html",
+            "website/RedWineRagu.html",
+            "website/SalmonChowder.html",
+            "website/Shakshuka.html")
+selected.breakfast = sample(breakfasts, 1)
+selected.dinners   = sample(dinner, 3)
+(selected.files = c(selected.breakfast, selected.dinners))
+```
+
+## Garden Tomato Quiche
+```{r}
+library("rvest")
+breakfast.item = read_html("website/GardenTomatoQuiche.html")
+ingredients.section = html_element(breakfast.item, "#ingredients")
+ingredients = html_elements(ingredients.section, "li")
+instructions.section = html_element(breakfast.item, "#instructions")
+instructions = html_elements(instructions.section, "li")
+image.element = html_element(breakfast.item, ".figure-img")
+image.url = html_attr(image.element, "src")
+image.url = paste("website/", image.url, sep = "")
+```
+
+**Image**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+# width="50%" shrinks the image for printing
+cat(paste('<img src="', image.url, '" style="width: 50%; height: auto;">'))
+```
+
+**Ingredients**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+formatted_list <- paste("-", html_text(ingredients))
+cat(formatted_list, sep = "\n")
+```
+
+**Instructions**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+formatted_list <- paste("1.", html_text(instructions))
+cat(formatted_list, sep = "\n") 
+```
+
+## BBQ Chili
+```{r}
+library("rvest")
+bbq.item = read_html("website/BBQChili.html")
+ingredients.section = html_element(bbq.item, "#ingredients")
+ingredients = html_elements(ingredients.section, "li")
+instructions.section = html_element(bbq.item, "#instructions")
+instructions = html_elements(instructions.section, "li")
+image.element = html_element(bbq.item, ".figure-img")
+image.url = html_attr(image.element, "src")
+image.url = paste("website/", image.url, sep = "")
+```
+
+**Image**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+# width="50%" shrinks the image for printing
+cat(paste('<img src="', image.url, '" style="width: 50%; height: auto;">'))
+```
+
+**Ingredients**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+formatted_list <- paste("-", html_text(ingredients))
+cat(formatted_list, sep = "\n")
+```
+
+**Instructions**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+formatted_list <- paste("1.", html_text(instructions))
+cat(formatted_list, sep = "\n") 
+```
+
+## Baked Ziti
+```{r}
+library("rvest")
+ziti.item = read_html("website/BakedZiti.html")
+ingredients.section = html_element(ziti.item, "#ingredients")
+ingredients = html_elements(ingredients.section, "li")
+instructions.section = html_element(ziti.item, "#instructions")
+instructions = html_elements(instructions.section, "li")
+image.element = html_element(ziti.item, ".figure-img")
+image.url = html_attr(image.element, "src")
+image.url = paste("website/", image.url, sep = "")
+```
+
+**Image**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+# width="50%" shrinks the image for printing
+cat(paste('<img src="', image.url, '" style="width: 50%; height: auto;">'))
+```
+
+**Ingredients**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+formatted_list <- paste("-", html_text(ingredients))
+cat(formatted_list, sep = "\n")
+```
+
+**Instructions**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+formatted_list <- paste("1.", html_text(instructions))
+cat(formatted_list, sep = "\n") 
+```
+
+## Past And Peas
+```{r}
+library("rvest")
+pasta.item = read_html("website/PastaAndPeas.html")
+ingredients.section = html_element(pasta.item, "#ingredients")
+ingredients = html_elements(ingredients.section, "li")
+instructions.section = html_element(pasta.item, "#instructions")
+instructions = html_elements(instructions.section, "li")
+image.element = html_element(pasta.item, ".figure-img")
+image.url = html_attr(image.element, "src")
+image.url = paste("website/", image.url, sep = "")
+```
+
+**Image**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+# width="50%" shrinks the image for printing
+cat(paste('<img src="', image.url, '" style="width: 50%; height: auto;">'))
+```
+
+**Ingredients**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+formatted_list <- paste("-", html_text(ingredients))
+cat(formatted_list, sep = "\n")
+```
+
+**Instructions**
+
+```{r}
+#| echo: false
+#| results: 'asis'
+formatted_list <- paste("1.", html_text(instructions))
+cat(formatted_list, sep = "\n") 
+```
 
 # Describe your work!
 
@@ -364,3 +569,7 @@ Did you use loops in your code? If yes, how. If not, are there places you could 
 ## Functions
 Did you use functions in your code? If yes, how. If not, are there places you could have used them but did something else?
 
+# Citations
+The [@rvest] package was crucial in creating this fake website. This package is used to "scrape" websites, extracting the information for closer review or for cleaning data. This is a key part of the larger Tidyverse package.
+
+# Discussion

@@ -171,6 +171,18 @@ window.Quarto = {
 </details>
 </div>
 <p></p>
+<p><strong>Solution</strong></p>
+<p></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>(x[<span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+</div>
+<p></p>
 </section>
 <section id="part-b" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="part-b"><span class="header-section-number">1.2</span> Part b</h2>
@@ -179,17 +191,17 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">set.seed</span>(<span class="dv">7272</span>) <span class="co"># sets the randomization seed for replication</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x1 =</span> <span class="fu">sample</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,          <span class="co"># sample from 1, 2, 3, ..., 10 </span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>                             <span class="at">size=</span><span class="dv">10</span>,         <span class="co"># sample of 10</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a>                             <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="co"># allowed to sample the same item multiple times</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>                 <span class="at">x2 =</span> <span class="fu">sample</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,          <span class="co"># sample from 1, 2, 3, ..., 10 </span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>                             <span class="at">size=</span><span class="dv">10</span>,         <span class="co"># sample of 10</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a>                             <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="co"># allowed to sample the same item multiple times</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a>                 <span class="at">x3 =</span> <span class="fu">sample</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,          <span class="co"># sample from 1, 2, 3, ..., 10 </span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>                             <span class="at">size=</span><span class="dv">10</span>,         <span class="co"># sample of 10</span></span>
-<span id="cb2-10"><a href="#cb2-10"></a>                             <span class="at">replace =</span> <span class="cn">TRUE</span>)  <span class="co"># allowed to sample the same item multiple times,</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">set.seed</span>(<span class="dv">7272</span>) <span class="co"># sets the randomization seed for replication</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x1 =</span> <span class="fu">sample</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,          <span class="co"># sample from 1, 2, 3, ..., 10 </span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>                             <span class="at">size=</span><span class="dv">10</span>,         <span class="co"># sample of 10</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>                             <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="co"># allowed to sample the same item multiple times</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>                 <span class="at">x2 =</span> <span class="fu">sample</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,          <span class="co"># sample from 1, 2, 3, ..., 10 </span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>                             <span class="at">size=</span><span class="dv">10</span>,         <span class="co"># sample of 10</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>                             <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="co"># allowed to sample the same item multiple times</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>                 <span class="at">x3 =</span> <span class="fu">sample</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,          <span class="co"># sample from 1, 2, 3, ..., 10 </span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>                             <span class="at">size=</span><span class="dv">10</span>,         <span class="co"># sample of 10</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a>                             <span class="at">replace =</span> <span class="cn">TRUE</span>)  <span class="co"># allowed to sample the same item multiple times,</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p></p>
@@ -202,7 +214,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>  x1 x2 x3
@@ -224,7 +236,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>df[ ,<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>df[ ,<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 8 3 5 3 2 3 1 2 6 2</code></pre>
@@ -240,7 +252,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>df[<span class="dv">5</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>df[<span class="dv">5</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>  x1 x2 x3
@@ -257,7 +269,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>df[<span class="dv">5</span>, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>df[<span class="dv">5</span>, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
@@ -273,7 +285,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>df[<span class="dv">5</span>, <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>df[<span class="dv">5</span>, <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
@@ -289,7 +301,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>df[<span class="dv">0</span><span class="sc">:</span><span class="dv">4</span><span class="sc">*</span><span class="dv">2</span><span class="sc">+</span><span class="dv">1</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>df[<span class="dv">0</span><span class="sc">:</span><span class="dv">4</span><span class="sc">*</span><span class="dv">2</span><span class="sc">+</span><span class="dv">1</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>  x1 x2 x3
@@ -309,12 +321,12 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span>                 <span class="co"># How many rows to we have to fill?</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a>df<span class="sc">$</span>x12 <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">10</span>)   <span class="co"># Create an empty column for x12</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){</span>
-<span id="cb15-4"><a href="#cb15-4"></a> df<span class="sc">$</span>x12[i] <span class="ot">=</span> df<span class="sc">$</span>x1[i]<span class="sc">*</span>df<span class="sc">$</span>x2[i]</span>
-<span id="cb15-5"><a href="#cb15-5"></a>}</span>
-<span id="cb15-6"><a href="#cb15-6"></a><span class="fu">print</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span>                 <span class="co"># How many rows to we have to fill?</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>df<span class="sc">$</span>x12 <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">10</span>)   <span class="co"># Create an empty column for x12</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){</span>
+<span id="cb17-4"><a href="#cb17-4"></a> df<span class="sc">$</span>x12[i] <span class="ot">=</span> df<span class="sc">$</span>x1[i]<span class="sc">*</span>df<span class="sc">$</span>x2[i]</span>
+<span id="cb17-5"><a href="#cb17-5"></a>}</span>
+<span id="cb17-6"><a href="#cb17-6"></a><span class="fu">print</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>   x1 x2 x3 x12
@@ -340,13 +352,13 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span>                 <span class="co"># How many rows to we have to fill?</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a>df<span class="sc">$</span>total.score <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">10</span>)   <span class="co"># Create an empty column for total.score</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){</span>
-<span id="cb17-4"><a href="#cb17-4"></a>  calculate.score <span class="ot">=</span> (df<span class="sc">$</span>x1[i]<span class="sc">*</span><span class="dv">2</span>)<span class="sc">+</span>df<span class="sc">$</span>x2[i]<span class="sc">-</span>df<span class="sc">$</span>x3[i]</span>
-<span id="cb17-5"><a href="#cb17-5"></a>  df<span class="sc">$</span>total.score[i] <span class="ot">=</span> calculate.score</span>
-<span id="cb17-6"><a href="#cb17-6"></a>}</span>
-<span id="cb17-7"><a href="#cb17-7"></a><span class="fu">print</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span>                 <span class="co"># How many rows to we have to fill?</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>df<span class="sc">$</span>total.score <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">10</span>)   <span class="co"># Create an empty column for total.score</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){</span>
+<span id="cb19-4"><a href="#cb19-4"></a>  calculate.score <span class="ot">=</span> (df<span class="sc">$</span>x1[i]<span class="sc">*</span><span class="dv">2</span>)<span class="sc">+</span>df<span class="sc">$</span>x2[i]<span class="sc">-</span>df<span class="sc">$</span>x3[i]</span>
+<span id="cb19-5"><a href="#cb19-5"></a>  df<span class="sc">$</span>total.score[i] <span class="ot">=</span> calculate.score</span>
+<span id="cb19-6"><a href="#cb19-6"></a>}</span>
+<span id="cb19-7"><a href="#cb19-7"></a><span class="fu">print</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>   x1 x2 x3 x12 total.score
@@ -372,20 +384,20 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>evaluate.row <span class="ot">=</span> <span class="cf">function</span>(n){</span>
-<span id="cb19-2"><a href="#cb19-2"></a>  <span class="cf">if</span> (n <span class="sc">&lt;</span> <span class="dv">4</span>){</span>
-<span id="cb19-3"><a href="#cb19-3"></a>    <span class="fu">return</span>(<span class="st">"low"</span>)</span>
-<span id="cb19-4"><a href="#cb19-4"></a>  } </span>
-<span id="cb19-5"><a href="#cb19-5"></a>  <span class="cf">if</span> (<span class="dv">4</span> <span class="sc">&lt;=</span> n <span class="sc">&amp;</span> n <span class="sc">&lt;=</span> <span class="dv">7</span>){</span>
-<span id="cb19-6"><a href="#cb19-6"></a>    <span class="fu">return</span>(<span class="st">"mid"</span>)</span>
-<span id="cb19-7"><a href="#cb19-7"></a>  } </span>
-<span id="cb19-8"><a href="#cb19-8"></a>  <span class="cf">if</span> (n <span class="sc">&gt;=</span> <span class="dv">8</span>){</span>
-<span id="cb19-9"><a href="#cb19-9"></a>    <span class="fu">return</span>(<span class="st">"high"</span>)</span>
-<span id="cb19-10"><a href="#cb19-10"></a>  }</span>
-<span id="cb19-11"><a href="#cb19-11"></a>}</span>
-<span id="cb19-12"><a href="#cb19-12"></a></span>
-<span id="cb19-13"><a href="#cb19-13"></a></span>
-<span id="cb19-14"><a href="#cb19-14"></a><span class="fu">sapply</span>(df<span class="sc">$</span>x1, evaluate.row)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>evaluate.row <span class="ot">=</span> <span class="cf">function</span>(n){</span>
+<span id="cb21-2"><a href="#cb21-2"></a>  <span class="cf">if</span> (n <span class="sc">&lt;</span> <span class="dv">4</span>){</span>
+<span id="cb21-3"><a href="#cb21-3"></a>    <span class="fu">return</span>(<span class="st">"low"</span>)</span>
+<span id="cb21-4"><a href="#cb21-4"></a>  } </span>
+<span id="cb21-5"><a href="#cb21-5"></a>  <span class="cf">if</span> (<span class="dv">4</span> <span class="sc">&lt;=</span> n <span class="sc">&amp;</span> n <span class="sc">&lt;=</span> <span class="dv">7</span>){</span>
+<span id="cb21-6"><a href="#cb21-6"></a>    <span class="fu">return</span>(<span class="st">"mid"</span>)</span>
+<span id="cb21-7"><a href="#cb21-7"></a>  } </span>
+<span id="cb21-8"><a href="#cb21-8"></a>  <span class="cf">if</span> (n <span class="sc">&gt;=</span> <span class="dv">8</span>){</span>
+<span id="cb21-9"><a href="#cb21-9"></a>    <span class="fu">return</span>(<span class="st">"high"</span>)</span>
+<span id="cb21-10"><a href="#cb21-10"></a>  }</span>
+<span id="cb21-11"><a href="#cb21-11"></a>}</span>
+<span id="cb21-12"><a href="#cb21-12"></a></span>
+<span id="cb21-13"><a href="#cb21-13"></a></span>
+<span id="cb21-14"><a href="#cb21-14"></a><span class="fu">sapply</span>(df<span class="sc">$</span>x1, evaluate.row)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "high" "low"  "mid"  "low"  "low"  "low"  "low"  "low"  "mid"  "low" </code></pre>
@@ -404,7 +416,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>(df<span class="sc">$</span><span class="at">x12 =</span> df<span class="sc">$</span>x1 <span class="sc">*</span> df<span class="sc">$</span>x2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>(df<span class="sc">$</span><span class="at">x12 =</span> df<span class="sc">$</span>x1 <span class="sc">*</span> df<span class="sc">$</span>x2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  8 21 15 18  4 24 10 12 12  8</code></pre>
@@ -419,7 +431,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>(df<span class="sc">$</span><span class="at">total.score =</span> (df<span class="sc">$</span>x1<span class="sc">*</span><span class="dv">2</span>)<span class="sc">+</span>df<span class="sc">$</span>x2<span class="sc">-</span>df<span class="sc">$</span>x3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>(df<span class="sc">$</span><span class="at">total.score =</span> (df<span class="sc">$</span>x1<span class="sc">*</span><span class="dv">2</span>)<span class="sc">+</span>df<span class="sc">$</span>x2<span class="sc">-</span>df<span class="sc">$</span>x3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  9 11 10 10  3  4 11  9  4  7</code></pre>
@@ -434,8 +446,8 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>(<span class="at">evaluate.row =</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>x1 <span class="sc">&lt;</span> <span class="dv">4</span>, <span class="st">"low"</span>,</span>
-<span id="cb25-2"><a href="#cb25-2"></a>    <span class="fu">ifelse</span>(df<span class="sc">$</span>x1 <span class="sc">&lt;=</span><span class="dv">7</span>, <span class="st">"mid"</span>, <span class="st">"high"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>(<span class="at">evaluate.row =</span> <span class="fu">ifelse</span>(df<span class="sc">$</span>x1 <span class="sc">&lt;</span> <span class="dv">4</span>, <span class="st">"low"</span>,</span>
+<span id="cb27-2"><a href="#cb27-2"></a>    <span class="fu">ifelse</span>(df<span class="sc">$</span>x1 <span class="sc">&lt;=</span><span class="dv">7</span>, <span class="st">"mid"</span>, <span class="st">"high"</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "high" "low"  "mid"  "low"  "low"  "low"  "low"  "low"  "mid"  "low" </code></pre>
@@ -454,7 +466,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">install.packages</span>(<span class="st">"rvest"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">install.packages</span>(<span class="st">"rvest"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p></p>
@@ -462,7 +474,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">library</span>(<span class="st">"rvest"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">library</span>(<span class="st">"rvest"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p></p>
@@ -475,8 +487,8 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">library</span>(<span class="st">"rvest"</span>)</span>
-<span id="cb29-2"><a href="#cb29-2"></a>recipe.item <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">"website/KimchiGrilledCheese.html"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">library</span>(<span class="st">"rvest"</span>)</span>
+<span id="cb31-2"><a href="#cb31-2"></a>recipe.item <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">"website/KimchiGrilledCheese.html"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p></p>
@@ -490,7 +502,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>ingredients.section <span class="ot">=</span> <span class="fu">html_element</span>(recipe.item, <span class="st">"#ingredients"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>ingredients.section <span class="ot">=</span> <span class="fu">html_element</span>(recipe.item, <span class="st">"#ingredients"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p></p>
@@ -503,7 +515,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>ingredients <span class="ot">=</span> <span class="fu">html_elements</span>(ingredients.section, <span class="st">"li"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>ingredients <span class="ot">=</span> <span class="fu">html_elements</span>(ingredients.section, <span class="st">"li"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p></p>
@@ -516,7 +528,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>instructions.section <span class="ot">=</span> <span class="fu">html_element</span>(recipe.item, <span class="st">"#instructions"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>instructions.section <span class="ot">=</span> <span class="fu">html_element</span>(recipe.item, <span class="st">"#instructions"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p></p>
@@ -529,7 +541,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>instructions <span class="ot">=</span> <span class="fu">html_element</span>(instructions.section, <span class="st">"li"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>instructions <span class="ot">=</span> <span class="fu">html_elements</span>(instructions.section, <span class="st">"li"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p></p>
@@ -542,7 +554,7 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>image.element <span class="ot">=</span> <span class="fu">html_element</span>(recipe.item, <span class="st">".figure-img"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>image.element <span class="ot">=</span> <span class="fu">html_element</span>(recipe.item, <span class="st">".figure-img"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p></p>
@@ -555,12 +567,9 @@ window.Quarto = {
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>image.url <span class="ot">&lt;-</span> <span class="fu">html_attr</span>(image.element, <span class="st">"src"</span>)</span>
-<span id="cb35-2"><a href="#cb35-2"></a>(image.url <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">"website/"</span>, image.url, <span class="at">sep =</span> <span class="st">""</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a>image.url <span class="ot">=</span> <span class="fu">html_attr</span>(image.element, <span class="st">"src"</span>)</span>
+<span id="cb37-2"><a href="#cb37-2"></a>image.url <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"website/"</span>, image.url, <span class="at">sep =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "website/images/KimchiGrilledCheese.jpg"</code></pre>
-</div>
 </div>
 <p></p>
 </section>
@@ -589,6 +598,10 @@ window.Quarto = {
 <p></p>
 <ol type="1">
 <li>In a frying pan, heat 2 tablespoons olive oil with chili flakes.</li>
+<li>Add spinach and cook until wilted.</li>
+<li>Mix gochujang and mayonnaise in a small bowl and spread on one side of each slice of bread. Sprinkle with everything seasoning and press it into the bread.</li>
+<li>Build sandwiches by layering spinach, kimchi, and cheese between two slices of bread.</li>
+<li>Fry in butter until golden brown on both sides.</li>
 </ol>
 <p></p>
 </section>
@@ -603,6 +616,227 @@ window.Quarto = {
 <li>Print the image, ingredients, and instructions for each receipe on the subsequent pages.</li>
 </ol>
 <p>When you render this document, no code should be visible. Instead, you should see a five-page document as described above.</p>
+<p><strong>Solution</strong></p>
+<p></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "website/GardenTomatoQuiche.html" "website/BBQChili.html"          
+[3] "website/PastaAndPeas.html"       "website/BakedZiti.html"         </code></pre>
+</div>
+</div>
+<p></p>
+<section id="garden-tomato-quiche" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="garden-tomato-quiche"><span class="header-section-number">3.1</span> Garden Tomato Quiche</h2>
+<p></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">library</span>(<span class="st">"rvest"</span>)</span>
+<span id="cb39-2"><a href="#cb39-2"></a>breakfast.item <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">"website/GardenTomatoQuiche.html"</span>)</span>
+<span id="cb39-3"><a href="#cb39-3"></a>ingredients.section <span class="ot">=</span> <span class="fu">html_element</span>(breakfast.item, <span class="st">"#ingredients"</span>)</span>
+<span id="cb39-4"><a href="#cb39-4"></a>ingredients <span class="ot">=</span> <span class="fu">html_elements</span>(ingredients.section, <span class="st">"li"</span>)</span>
+<span id="cb39-5"><a href="#cb39-5"></a>instructions.section <span class="ot">=</span> <span class="fu">html_element</span>(breakfast.item, <span class="st">"#instructions"</span>)</span>
+<span id="cb39-6"><a href="#cb39-6"></a>instructions <span class="ot">=</span> <span class="fu">html_elements</span>(instructions.section, <span class="st">"li"</span>)</span>
+<span id="cb39-7"><a href="#cb39-7"></a>image.element <span class="ot">=</span> <span class="fu">html_element</span>(breakfast.item, <span class="st">".figure-img"</span>)</span>
+<span id="cb39-8"><a href="#cb39-8"></a>image.url <span class="ot">=</span> <span class="fu">html_attr</span>(image.element, <span class="st">"src"</span>)</span>
+<span id="cb39-9"><a href="#cb39-9"></a>image.url <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"website/"</span>, image.url, <span class="at">sep =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p></p>
+<p><strong>Image</strong></p>
+<p></p>
+<p><img src=" website/images/GardenTomatoQuiche.jpg " style="width: 50%; height: auto;"></p>
+<p></p>
+<p><strong>Ingredients</strong></p>
+<p></p>
+<ul>
+<li>1 egg</li>
+<li>2 1/2 tablespoons ice water</li>
+<li>1 1/2 cups flour</li>
+<li>10 tablespoons butter</li>
+<li>7 eggs</li>
+<li>1/2 cups parmesan cheese</li>
+<li>1 cup swiss and gruyere shredded cheese blend</li>
+<li>1 cup milk</li>
+<li>1 teaspoon italian seasoning</li>
+<li>1/4 teaspoon salt</li>
+<li>1/8 teaspoon chili flakes</li>
+<li>1 tsp dried basil (or 4-5 fresh basil leaves)</li>
+<li>12 ounces cherry tomatoes</li>
+</ul>
+<p></p>
+<p><strong>Instructions</strong></p>
+<p></p>
+<ol type="1">
+<li>Grease a pie plate.</li>
+<li>Whisk egg and ice water in a small bowl.</li>
+<li>Cut butter into small cubes and mix into flour and salt. If you have a food processor, use it. Otherwise mix with a fork until it is a sand-like mixture.</li>
+<li>Add the egg mixture into the bowl with the flour and mix until a dough forms.</li>
+<li>Roll out dough to fit a pie plate, pierce with a fork, and press it into the pan.</li>
+<li>Put the pie plate in the freezer while the oven preheats to 375 degrees.</li>
+<li>Blind bake quiche crust with pie weights (can use dried beans instead) for 15 minutes.</li>
+<li>Mix 3 egg yolks, 4 whole eggs, parmesan cheese, shredded cheese, milk, italian seasoning, salt, chili flakes, and basil.</li>
+<li>Halve cherry tomatoes.</li>
+<li>Pour egg mixture into the pie plate.</li>
+<li>Place cherry tomatoes cut-side up, filling the surface area of the quiche. Sprinkle with salt and italian seasoning.</li>
+<li>Bake for 35-50 minutes, until the edges are set but the center has a slight jiggle or it reaches an internal temperature near 175.</li>
+</ol>
+<p></p>
+</section>
+<section id="bbq-chili" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="bbq-chili"><span class="header-section-number">3.2</span> BBQ Chili</h2>
+<p></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">library</span>(<span class="st">"rvest"</span>)</span>
+<span id="cb40-2"><a href="#cb40-2"></a>bbq.item <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">"website/BBQChili.html"</span>)</span>
+<span id="cb40-3"><a href="#cb40-3"></a>ingredients.section <span class="ot">=</span> <span class="fu">html_element</span>(bbq.item, <span class="st">"#ingredients"</span>)</span>
+<span id="cb40-4"><a href="#cb40-4"></a>ingredients <span class="ot">=</span> <span class="fu">html_elements</span>(ingredients.section, <span class="st">"li"</span>)</span>
+<span id="cb40-5"><a href="#cb40-5"></a>instructions.section <span class="ot">=</span> <span class="fu">html_element</span>(bbq.item, <span class="st">"#instructions"</span>)</span>
+<span id="cb40-6"><a href="#cb40-6"></a>instructions <span class="ot">=</span> <span class="fu">html_elements</span>(instructions.section, <span class="st">"li"</span>)</span>
+<span id="cb40-7"><a href="#cb40-7"></a>image.element <span class="ot">=</span> <span class="fu">html_element</span>(bbq.item, <span class="st">".figure-img"</span>)</span>
+<span id="cb40-8"><a href="#cb40-8"></a>image.url <span class="ot">=</span> <span class="fu">html_attr</span>(image.element, <span class="st">"src"</span>)</span>
+<span id="cb40-9"><a href="#cb40-9"></a>image.url <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"website/"</span>, image.url, <span class="at">sep =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p></p>
+<p><strong>Image</strong></p>
+<p></p>
+<p><img src=" website/images/BBQChili.jpg " style="width: 50%; height: auto;"></p>
+<p></p>
+<p><strong>Ingredients</strong></p>
+<p></p>
+<ul>
+<li>2 cans of baked beans</li>
+<li>1 can of black beans (drained and rinsed)</li>
+<li>1 can of white kidney beans (drained and rinsed)</li>
+<li>1 can of red kidney beans (drained and rinsed)</li>
+<li>1 large yellow onion</li>
+<li>1 pound of ground beef</li>
+<li>1 pound of bacon</li>
+<li>16 ounces of BBQ sauce</li>
+</ul>
+<p></p>
+<p><strong>Instructions</strong></p>
+<p></p>
+<ol type="1">
+<li>Dice the yellow onion.</li>
+<li>Drain and rinse black, white, and red beans.</li>
+<li>Crumble and cook beef in a frying pan.</li>
+<li>Cook bacon and cut into bite size pieces.</li>
+<li>Combine all ingredients in a crock pot. Cook at low heat for 6-7 hours. Stir occasionally.</li>
+</ol>
+<p></p>
+</section>
+<section id="baked-ziti" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="baked-ziti"><span class="header-section-number">3.3</span> Baked Ziti</h2>
+<p></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">library</span>(<span class="st">"rvest"</span>)</span>
+<span id="cb41-2"><a href="#cb41-2"></a>ziti.item <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">"website/BakedZiti.html"</span>)</span>
+<span id="cb41-3"><a href="#cb41-3"></a>ingredients.section <span class="ot">=</span> <span class="fu">html_element</span>(ziti.item, <span class="st">"#ingredients"</span>)</span>
+<span id="cb41-4"><a href="#cb41-4"></a>ingredients <span class="ot">=</span> <span class="fu">html_elements</span>(ingredients.section, <span class="st">"li"</span>)</span>
+<span id="cb41-5"><a href="#cb41-5"></a>instructions.section <span class="ot">=</span> <span class="fu">html_element</span>(ziti.item, <span class="st">"#instructions"</span>)</span>
+<span id="cb41-6"><a href="#cb41-6"></a>instructions <span class="ot">=</span> <span class="fu">html_elements</span>(instructions.section, <span class="st">"li"</span>)</span>
+<span id="cb41-7"><a href="#cb41-7"></a>image.element <span class="ot">=</span> <span class="fu">html_element</span>(ziti.item, <span class="st">".figure-img"</span>)</span>
+<span id="cb41-8"><a href="#cb41-8"></a>image.url <span class="ot">=</span> <span class="fu">html_attr</span>(image.element, <span class="st">"src"</span>)</span>
+<span id="cb41-9"><a href="#cb41-9"></a>image.url <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"website/"</span>, image.url, <span class="at">sep =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p></p>
+<p><strong>Image</strong></p>
+<p></p>
+<p><img src=" website/images/BakedZiti.jpg " style="width: 50%; height: auto;"></p>
+<p></p>
+<p><strong>Ingredients</strong></p>
+<p></p>
+<ul>
+<li>1 2 oz can of anchovies</li>
+<li>1 vidalia onion</li>
+<li>5 garlic cloves</li>
+<li>1/2 cup red wine (optional)</li>
+<li>1 small can of tomato paste</li>
+<li>2 tablespoons butter</li>
+<li>1 large can of peeled tomatoes</li>
+<li>2 tablespoons honey</li>
+<li>3 tsp italian seasoning</li>
+<li>1/8 tsp red pepper flakes</li>
+<li>1 pound pasta (e.g., rigatoni or penne)</li>
+<li>1 pound of ground beef or sausage</li>
+<li>1 large container of ricotta cheese</li>
+<li>1/2 cup grated parmesan cheese</li>
+<li>1 egg</li>
+<li>8 oz mozzarella</li>
+</ul>
+<p></p>
+<p><strong>Instructions</strong></p>
+<p></p>
+<ol type="1">
+<li>Dice onion and mince garlic.</li>
+<li>Heat 2 tablespoons olive oil in a sauce pan. Add anchovies and cook until they break down.</li>
+<li>Add onions and garlic to the pan and cook until soft.</li>
+<li>Add red wine and simmer for 3-5 minutes (optional).</li>
+<li>Add tomato paste and butter, and cook until fully combined.</li>
+<li>At peeled tomatoes, stir breaking up tomatoes.</li>
+<li>Once simmering, add honey, 2 tsp italian seasoning, pepper flakes and continue to stir.</li>
+<li>Brown meat in a frying pan with 1 tsp italian seasoning.</li>
+<li>Prepare pasta according to package instructions. Save 1 cup of pasta water in case you need to loosen the sauce.</li>
+<li>Drain meat and put in a large bowl. Mix in ricotta, egg, half the mozzarella, half the parmesan, and a pinch of salt and pepper. Add in half the tomato sauce and all of the pasta.</li>
+<li>Add mixture to a 9x13 glass pan. Top with remaining tomato sauce, mozzarella cheese, and parmesan.</li>
+<li>Bake in the oven at 375 degrees for 35 minutes.</li>
+</ol>
+<p></p>
+</section>
+<section id="past-and-peas" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="past-and-peas"><span class="header-section-number">3.4</span> Past And Peas</h2>
+<p></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">library</span>(<span class="st">"rvest"</span>)</span>
+<span id="cb42-2"><a href="#cb42-2"></a>pasta.item <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">"website/PastaAndPeas.html"</span>)</span>
+<span id="cb42-3"><a href="#cb42-3"></a>ingredients.section <span class="ot">=</span> <span class="fu">html_element</span>(pasta.item, <span class="st">"#ingredients"</span>)</span>
+<span id="cb42-4"><a href="#cb42-4"></a>ingredients <span class="ot">=</span> <span class="fu">html_elements</span>(ingredients.section, <span class="st">"li"</span>)</span>
+<span id="cb42-5"><a href="#cb42-5"></a>instructions.section <span class="ot">=</span> <span class="fu">html_element</span>(pasta.item, <span class="st">"#instructions"</span>)</span>
+<span id="cb42-6"><a href="#cb42-6"></a>instructions <span class="ot">=</span> <span class="fu">html_elements</span>(instructions.section, <span class="st">"li"</span>)</span>
+<span id="cb42-7"><a href="#cb42-7"></a>image.element <span class="ot">=</span> <span class="fu">html_element</span>(pasta.item, <span class="st">".figure-img"</span>)</span>
+<span id="cb42-8"><a href="#cb42-8"></a>image.url <span class="ot">=</span> <span class="fu">html_attr</span>(image.element, <span class="st">"src"</span>)</span>
+<span id="cb42-9"><a href="#cb42-9"></a>image.url <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"website/"</span>, image.url, <span class="at">sep =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p></p>
+<p><strong>Image</strong></p>
+<p></p>
+<p><img src=" website/images/PastaAndPeas.jpg " style="width: 50%; height: auto;"></p>
+<p></p>
+<p><strong>Ingredients</strong></p>
+<p></p>
+<ul>
+<li>1 large Vidalia onion</li>
+<li>6 garlic cloves</li>
+<li>12 oz bag of peas</li>
+<li>1 pound regular or mezzi rigatoni</li>
+<li>1/2 cup grated parmesan cheese</li>
+<li>Italian seasoning and chili flakes</li>
+</ul>
+<p></p>
+<p><strong>Instructions</strong></p>
+<p></p>
+<ol type="1">
+<li>Chop onion and mince garlic.</li>
+<li>Boil and cook pasta according to package instructions, reserve 1 cup pasta water if it finishes before step 5.</li>
+<li>Cook onion and garlic in 2 tablespoons olive oil until translucent, 5-7 minutes. Season with salt, pepper, Italian seasoning, and chili flakes.</li>
+<li>Add frozen peas to onions and garlic.</li>
+<li>Add two ladles of pasta water to onion, garlic, and peas and simmer.</li>
+<li>Add drained pasta back into the stock pot, drizzle with olive oil, and season with Italian seasoning.</li>
+<li>Mix onion, garlic, and peas into the stock pot with pasta. Mix in parmesan cheese.</li>
+<li>Serve with additional parmesan cheese.</li>
+</ol>
+<p></p>
+</section>
 </section>
 <section id="describe-your-work" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Describe your work!</h1>
@@ -621,11 +855,18 @@ window.Quarto = {
 <section id="functions" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="functions"><span class="header-section-number">4.4</span> Functions</h2>
 <p>Did you use functions in your code? If yes, how. If not, are there places you could have used them but did something else?</p>
-
 </section>
 </section>
+<section id="citations" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Citations</h1>
+<p>The <span class="citation" data-cites="rvest">(<a href="#ref-rvest" role="doc-biblioref">Wickham 2025</a>)</span> package was crucial in creating this fake website. This package is used to “scrape” websites, extracting the information for closer review or for cleaning data. This is a key part of the larger <span class="citation" data-cites="tidyverse">(<a href="#ref-tidyverse" role="doc-biblioref"><strong>tidyverse?</strong></a>)</span>.</p>
+</section>
+<section id="discussion" class="level1 unnumbered" data-number="6">
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">6 Discussion</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-rvest" class="csl-entry" role="listitem">
 Wickham, Hadley. 2025. <em>Rvest: Easily Harvest (Scrape) Web Pages</em>. <a href="https://doi.org/10.32614/CRAN.package.rvest">https://doi.org/10.32614/CRAN.package.rvest</a>.
 </div>
