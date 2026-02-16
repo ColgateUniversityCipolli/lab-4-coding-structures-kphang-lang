@@ -153,6 +153,8 @@ df[0:4*2+1, ]
 
 ## Part h
 Below, I create an empty column called `x12`. Fill in the details of the `for(...)` loop to ensure `x12` is the product of `x1` and `x2`.
+
+**Solution** 
 ```{r}
 #| size: "scriptsize"
 n <- 10                 # How many rows to we have to fill?
@@ -186,7 +188,6 @@ print(df)
 Create a function called `evaluate.row(...)` that takes one argument and returns "low" when the argument is less than 4, "mid" when the argument is between 4 and 7 (inclusive), and "high" when the arguement is 8 or larger. Then, use `sapply(...)` to apply it to column `x1`.
 
 **Solution**
-
 ```{r}
 #| size: "scriptsize"
 evaluate.row = function(n){
@@ -211,29 +212,30 @@ Did we need to use loops or functions in (h.)-(j.)? That is, can we use vectoriz
 **Solution**
 
 ### Part h
-We needed a loop for part h to incorporate x12 into into the data frame, but we could have obtained the column alone using vectorization since all columns in a data frame are vectors: 
 ```{r}
 (df$x12 = df$x1 * df$x2)
 ```
 
+A loop was not actually needed here to form column x12 (alone), although we cannot replicate it inside the data frame. Since data frames are vectorized, you can use vectorization to multiply x1 and x2 by element. 
+
 ### Part i
-Similarly to part h, we could have created the column of total.score independent of the data frame by using vectorization since columns x1, x2, and x3 are, themselves, vectors:
 ```{r}
-(df$total.score = (df$x1*2)+df$x2-df$x3)
+(df$total.score = (df$x1 * 2) + df$x2 - df$x3)
 ```
 
+A loop was not needed here either to form column total.score (alone), although we cannot replicate it inside the data frame. Since data frames are vectorized, you can use vectorization to perform the arithmetic, applying the function to every row. 
+
 ### Part j
-part j also could have been completed using vectorization in a slightly different manner. Using ifelse() instead of if() and sapply(), produces the same result as above. The difference is the ifelse() function is vectorized (applies to every entry in a vector; does not go by element by element):
-```{r}
-(evaluate.row = ifelse(df$x1 < 4, "low",
-    ifelse(df$x1 <=7, "mid", "high")))
-```
+
+Part j cannot be done without a loop or sapply(), because if() statements in R are not vectorized and require a single logical value. Therefore, there is no way to apply if() statements to a whole column of a data frame.
 
 # Complete Tasks for One Recipe
 
 ## Part a
 
 Install and load the `rvest` package [@rvest].
+
+**Solution** 
 ```{r}
 #| eval: false
 install.packages("rvest")
@@ -563,13 +565,27 @@ Read [https://www.scrapingbee.com/blog/is-web-scraping-legal/](Is Web Sraping Le
 ## Conditionals
 Did you use conditional statements in your code? If yes, how. If not, are there places you could have used them but did something else?
 
+**Solution**
+
+Yes, I used conditional statements in part j of part 1. I used if() statements to return "low", "mid", and "high" for their corresponding n values (using logicals, and return()). I did this combined with the function evaluate.row which is a function of n, that later was applied to all of column x1 using sapply.
+
 ## Loops
-Did you use loops in your code? If yes, how. If not, are there places you could have used them but did something else?
+Did you use loops in your code? If yes, how. If not, are there places you could have used them but did something else? 
+
+**Solution**
+
+Yes, I used loops in parts h and i of part 1. In part h, I used a loop to repeat the multiplication of x1 and x2 accross all 10 rows without rewriting the code. This works creating an empty column for x12, then using a for loop for i in $1:10$ and applying the formula throughout. In part i I used a loop in a similar manner by, again, creating an empty column called total score, then using a for loop for i in $1:10$ that applies the calculate.score function to all 10 rows, storing the answers in the total.score column. Part k shows additional ways the x12 and total.score columns could be generated without using loops.
 
 ## Functions
 Did you use functions in your code? If yes, how. If not, are there places you could have used them but did something else?
+
+**Solution**
+
+I used functions several times throughout the lab. I used functions in parts i and j of part 1, parts b-h of part 2, and in the similar sections of part 3 (plus the sample() function part). Functions were very useful in this lab, especially for storing functions as objects to keep using them later on. This is because a lot of these activities built on each other, so being able to reference earlier functions easily was necessary.
 
 # Citations
 The [@rvest] package was crucial in creating this fake website. This package is used to "scrape" websites, extracting the information for closer review or for cleaning data. This is a key part of the larger Tidyverse package.
 
 # Discussion
+This lab required a wide variety of different R skills. Activities built on each other, starting with basic navigating of data frames like referencing cells/columns and using the head() function. Then, more advanced skills such as using for loops and conditional statements was required at the end of part 1 to create new columns and interact in more advanced ways with the data frame. Lastly, parts 2 and 3 got into the main task of the lab, recreating the recipe pages. In part 2, the functions read_html, html_element, and html_elements interacted with each other, to pull the different sections of the recipes before printing them. The html_attr and paste functions were used similarly to paste the images specifically. Part 3 was the same except the sample function was used first, storing the breakfast and dinner recipes as vectors and sampling 1 and 3 recipes respectively.
+
