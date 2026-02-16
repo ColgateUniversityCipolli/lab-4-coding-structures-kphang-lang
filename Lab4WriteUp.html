@@ -565,10 +565,13 @@ window.Quarto = {
 </section>
 <section id="part-i-2" class="level2" data-number="2.9">
 <h2 data-number="2.9" class="anchored" data-anchor-id="part-i-2"><span class="header-section-number">2.9</span> Part i</h2>
-<p>Now that we have all the things we need, let’s try to print the recipe. Below, I have written code to print from the objects. One by one, remove <code>#| eval: false</code> from the YAML header and add <code>#| echo: false</code> and <code>#| results: 'asis'</code>, and test. Let me know if you’re stuck!</p>
-<p><strong>Image</strong></p>
+<p>Now that we have all the things we need, let’s try to print the recipe. Below, I have written code to print from the objects. One by one, remove <code>#| eval: false</code> from the YAML header and add <code>#| echo: false</code> and <code>#| results: 'asis'</code>, and test. Let me know if you’re stuck! <strong>Image</strong></p>
 <p></p>
-<p><img src=" website/images/KimchiGrilledCheese.jpg " style="width: 50%; height: auto;"></p>
+</section>
+</section>
+<section id="kimchi-grilled-cheese" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Kimchi Grilled Cheese</h1>
+<p><img src="website/images/KimchiGrilledCheese.jpg" class="img-fluid" style="width:50.0%"></p>
 <p></p>
 <p><strong>Ingredients</strong></p>
 <p></p>
@@ -595,9 +598,8 @@ window.Quarto = {
 </ol>
 <p></p>
 </section>
-</section>
-<section id="complete-a-full-menu" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Complete a Full Menu!</h1>
+<section id="complete-a-full-menu" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Complete a Full Menu!</h1>
 <p>Open <code>Menu.qmd</code> and add code to complete the following.</p>
 <ol type="1">
 <li>Randomly select three dinner recipes and one breakfast recipe at random.<br> <strong>Hint:</strong> Use the <code>sample(...)</code> function.</li>
@@ -615,27 +617,13 @@ window.Quarto = {
 </div>
 </div>
 <p></p>
-<section id="garden-tomato-quiche" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="garden-tomato-quiche"><span class="header-section-number">3.1</span> Garden Tomato Quiche</h2>
 <p></p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">library</span>(<span class="st">"rvest"</span>)</span>
-<span id="cb37-2"><a href="#cb37-2"></a>breakfast.item <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">"website/GardenTomatoQuiche.html"</span>)</span>
-<span id="cb37-3"><a href="#cb37-3"></a>ingredients.section <span class="ot">=</span> <span class="fu">html_element</span>(breakfast.item, <span class="st">"#ingredients"</span>)</span>
-<span id="cb37-4"><a href="#cb37-4"></a>ingredients <span class="ot">=</span> <span class="fu">html_elements</span>(ingredients.section, <span class="st">"li"</span>)</span>
-<span id="cb37-5"><a href="#cb37-5"></a>instructions.section <span class="ot">=</span> <span class="fu">html_element</span>(breakfast.item, <span class="st">"#instructions"</span>)</span>
-<span id="cb37-6"><a href="#cb37-6"></a>instructions <span class="ot">=</span> <span class="fu">html_elements</span>(instructions.section, <span class="st">"li"</span>)</span>
-<span id="cb37-7"><a href="#cb37-7"></a>image.element <span class="ot">=</span> <span class="fu">html_element</span>(breakfast.item, <span class="st">".figure-img"</span>)</span>
-<span id="cb37-8"><a href="#cb37-8"></a>image.url <span class="ot">=</span> <span class="fu">html_attr</span>(image.element, <span class="st">"src"</span>)</span>
-<span id="cb37-9"><a href="#cb37-9"></a>image.url <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"website/"</span>, image.url, <span class="at">sep =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 <p></p>
-<p><strong>Image</strong></p>
 <p></p>
-<p><img src=" website/images/GardenTomatoQuiche.jpg " style="width: 50%; height: auto;"></p>
+</section>
+<section id="garden-tomato-quiche-serves-6-8" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Garden Tomato Quiche (Serves 6-8)</h1>
+<p><img src="website/images/GardenTomatoQuiche.jpg" class="img-fluid" style="width:50.0%"></p>
 <p></p>
 <p><strong>Ingredients</strong></p>
 <p></p>
@@ -672,28 +660,13 @@ window.Quarto = {
 <li>Bake for 35-50 minutes, until the edges are set but the center has a slight jiggle or it reaches an internal temperature near 175.</li>
 </ol>
 <p></p>
+<p></p>
+<p></p>
+<p></p>
 </section>
-<section id="bbq-chili" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="bbq-chili"><span class="header-section-number">3.2</span> BBQ Chili</h2>
-<p></p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">library</span>(<span class="st">"rvest"</span>)</span>
-<span id="cb38-2"><a href="#cb38-2"></a>bbq.item <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">"website/BBQChili.html"</span>)</span>
-<span id="cb38-3"><a href="#cb38-3"></a>ingredients.section <span class="ot">=</span> <span class="fu">html_element</span>(bbq.item, <span class="st">"#ingredients"</span>)</span>
-<span id="cb38-4"><a href="#cb38-4"></a>ingredients <span class="ot">=</span> <span class="fu">html_elements</span>(ingredients.section, <span class="st">"li"</span>)</span>
-<span id="cb38-5"><a href="#cb38-5"></a>instructions.section <span class="ot">=</span> <span class="fu">html_element</span>(bbq.item, <span class="st">"#instructions"</span>)</span>
-<span id="cb38-6"><a href="#cb38-6"></a>instructions <span class="ot">=</span> <span class="fu">html_elements</span>(instructions.section, <span class="st">"li"</span>)</span>
-<span id="cb38-7"><a href="#cb38-7"></a>image.element <span class="ot">=</span> <span class="fu">html_element</span>(bbq.item, <span class="st">".figure-img"</span>)</span>
-<span id="cb38-8"><a href="#cb38-8"></a>image.url <span class="ot">=</span> <span class="fu">html_attr</span>(image.element, <span class="st">"src"</span>)</span>
-<span id="cb38-9"><a href="#cb38-9"></a>image.url <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"website/"</span>, image.url, <span class="at">sep =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p></p>
-<p><strong>Image</strong></p>
-<p></p>
-<p><img src=" website/images/BBQChili.jpg " style="width: 50%; height: auto;"></p>
+<section id="bbq-chili" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> BBQ Chili</h1>
+<p><img src="website/images/BBQChili.jpg" class="img-fluid" style="width:50.0%"></p>
 <p></p>
 <p><strong>Ingredients</strong></p>
 <p></p>
@@ -718,28 +691,13 @@ window.Quarto = {
 <li>Combine all ingredients in a crock pot. Cook at low heat for 6-7 hours. Stir occasionally.</li>
 </ol>
 <p></p>
+<p></p>
+<p></p>
+<p></p>
 </section>
-<section id="baked-ziti" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="baked-ziti"><span class="header-section-number">3.3</span> Baked Ziti</h2>
-<p></p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">library</span>(<span class="st">"rvest"</span>)</span>
-<span id="cb39-2"><a href="#cb39-2"></a>ziti.item <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">"website/BakedZiti.html"</span>)</span>
-<span id="cb39-3"><a href="#cb39-3"></a>ingredients.section <span class="ot">=</span> <span class="fu">html_element</span>(ziti.item, <span class="st">"#ingredients"</span>)</span>
-<span id="cb39-4"><a href="#cb39-4"></a>ingredients <span class="ot">=</span> <span class="fu">html_elements</span>(ingredients.section, <span class="st">"li"</span>)</span>
-<span id="cb39-5"><a href="#cb39-5"></a>instructions.section <span class="ot">=</span> <span class="fu">html_element</span>(ziti.item, <span class="st">"#instructions"</span>)</span>
-<span id="cb39-6"><a href="#cb39-6"></a>instructions <span class="ot">=</span> <span class="fu">html_elements</span>(instructions.section, <span class="st">"li"</span>)</span>
-<span id="cb39-7"><a href="#cb39-7"></a>image.element <span class="ot">=</span> <span class="fu">html_element</span>(ziti.item, <span class="st">".figure-img"</span>)</span>
-<span id="cb39-8"><a href="#cb39-8"></a>image.url <span class="ot">=</span> <span class="fu">html_attr</span>(image.element, <span class="st">"src"</span>)</span>
-<span id="cb39-9"><a href="#cb39-9"></a>image.url <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"website/"</span>, image.url, <span class="at">sep =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p></p>
-<p><strong>Image</strong></p>
-<p></p>
-<p><img src=" website/images/BakedZiti.jpg " style="width: 50%; height: auto;"></p>
+<section id="baked-ziti" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Baked Ziti</h1>
+<p><img src="website/images/BakedZiti.jpg" class="img-fluid" style="width:50.0%"></p>
 <p></p>
 <p><strong>Ingredients</strong></p>
 <p></p>
@@ -779,28 +737,13 @@ window.Quarto = {
 <li>Bake in the oven at 375 degrees for 35 minutes.</li>
 </ol>
 <p></p>
+<p></p>
+<p></p>
+<p></p>
 </section>
-<section id="past-and-peas" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="past-and-peas"><span class="header-section-number">3.4</span> Past And Peas</h2>
-<p></p>
-<div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">library</span>(<span class="st">"rvest"</span>)</span>
-<span id="cb40-2"><a href="#cb40-2"></a>pasta.item <span class="ot">=</span> <span class="fu">read_html</span>(<span class="st">"website/PastaAndPeas.html"</span>)</span>
-<span id="cb40-3"><a href="#cb40-3"></a>ingredients.section <span class="ot">=</span> <span class="fu">html_element</span>(pasta.item, <span class="st">"#ingredients"</span>)</span>
-<span id="cb40-4"><a href="#cb40-4"></a>ingredients <span class="ot">=</span> <span class="fu">html_elements</span>(ingredients.section, <span class="st">"li"</span>)</span>
-<span id="cb40-5"><a href="#cb40-5"></a>instructions.section <span class="ot">=</span> <span class="fu">html_element</span>(pasta.item, <span class="st">"#instructions"</span>)</span>
-<span id="cb40-6"><a href="#cb40-6"></a>instructions <span class="ot">=</span> <span class="fu">html_elements</span>(instructions.section, <span class="st">"li"</span>)</span>
-<span id="cb40-7"><a href="#cb40-7"></a>image.element <span class="ot">=</span> <span class="fu">html_element</span>(pasta.item, <span class="st">".figure-img"</span>)</span>
-<span id="cb40-8"><a href="#cb40-8"></a>image.url <span class="ot">=</span> <span class="fu">html_attr</span>(image.element, <span class="st">"src"</span>)</span>
-<span id="cb40-9"><a href="#cb40-9"></a>image.url <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"website/"</span>, image.url, <span class="at">sep =</span> <span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p></p>
-<p><strong>Image</strong></p>
-<p></p>
-<p><img src=" website/images/PastaAndPeas.jpg " style="width: 50%; height: auto;"></p>
+<section id="pasta-and-peas-serves-4" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Pasta and Peas (Serves 4)</h1>
+<p><img src="website/images/PastaAndPeas.jpg" class="img-fluid" style="width:50.0%"></p>
 <p></p>
 <p><strong>Ingredients</strong></p>
 <p></p>
@@ -827,38 +770,37 @@ window.Quarto = {
 </ol>
 <p></p>
 </section>
-</section>
-<section id="describe-your-work" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Describe your work!</h1>
-<section id="why-a-fake-website" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="why-a-fake-website"><span class="header-section-number">4.1</span> Why a fake website?</h2>
+<section id="describe-your-work" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Describe your work!</h1>
+<section id="why-a-fake-website" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="why-a-fake-website"><span class="header-section-number">9.1</span> Why a fake website?</h2>
 <p>Read <a href="Is%20Web%20Sraping%20Legal?">https://www.scrapingbee.com/blog/is-web-scraping-legal/</a>. Originally, I conceived doing this with recipes from Purple Carrot (my favorite subscription service). Being a large company, their terms of service are <em>very</em> long and precluded us from copying their recipes. We also checked a few smaller recipe websites we like and even they had terms of service that restricted automated collection of data.</p>
 </section>
-<section id="conditionals" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="conditionals"><span class="header-section-number">4.2</span> Conditionals</h2>
+<section id="conditionals" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="conditionals"><span class="header-section-number">9.2</span> Conditionals</h2>
 <p>Did you use conditional statements in your code? If yes, how. If not, are there places you could have used them but did something else?</p>
 <p><strong>Solution</strong></p>
 <p>Yes, I used conditional statements in part j of part 1. I used if() statements to return “low”, “mid”, and “high” for their corresponding n values (using logicals, and return()). I did this combined with the function evaluate.row which is a function of n, that later was applied to all of column x1 using sapply.</p>
 </section>
-<section id="loops" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="loops"><span class="header-section-number">4.3</span> Loops</h2>
+<section id="loops" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="loops"><span class="header-section-number">9.3</span> Loops</h2>
 <p>Did you use loops in your code? If yes, how. If not, are there places you could have used them but did something else?</p>
 <p><strong>Solution</strong></p>
 <p>Yes, I used loops in parts h and i of part 1. In part h, I used a loop to repeat the multiplication of x1 and x2 accross all 10 rows without rewriting the code. This works creating an empty column for x12, then using a for loop for i in <span class="math inline">\(1:10\)</span> and applying the formula throughout. In part i I used a loop in a similar manner by, again, creating an empty column called total score, then using a for loop for i in <span class="math inline">\(1:10\)</span> that applies the calculate.score function to all 10 rows, storing the answers in the total.score column. Part k shows additional ways the x12 and total.score columns could be generated without using loops.</p>
 </section>
-<section id="functions" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="functions"><span class="header-section-number">4.4</span> Functions</h2>
+<section id="functions" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="functions"><span class="header-section-number">9.4</span> Functions</h2>
 <p>Did you use functions in your code? If yes, how. If not, are there places you could have used them but did something else?</p>
 <p><strong>Solution</strong></p>
 <p>I used functions several times throughout the lab. I used functions in parts i and j of part 1, parts b-h of part 2, and in the similar sections of part 3 (plus the sample() function part). Functions were very useful in this lab, especially for storing functions as objects to keep using them later on. This is because a lot of these activities built on each other, so being able to reference earlier functions easily was necessary.</p>
 </section>
 </section>
-<section id="citations" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Citations</h1>
+<section id="citations" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Citations</h1>
 <p>The <span class="citation" data-cites="rvest">(<a href="#ref-rvest" role="doc-biblioref">Wickham 2025</a>)</span> package was crucial in creating this fake website. This package is used to “scrape” websites, extracting the information for closer review or for cleaning data. This is a key part of the larger Tidyverse package.</p>
 </section>
-<section id="discussion" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Discussion</h1>
+<section id="discussion" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Discussion</h1>
 <p>This lab required a wide variety of different R skills. Activities built on each other, starting with basic navigating of data frames like referencing cells/columns and using the head() function. Then, more advanced skills such as using for loops and conditional statements was required at the end of part 1 to create new columns and interact in more advanced ways with the data frame. Lastly, parts 2 and 3 got into the main task of the lab, recreating the recipe pages. In part 2, the functions read_html, html_element, and html_elements interacted with each other, to pull the different sections of the recipes before printing them. The html_attr and paste functions were used similarly to paste the images specifically. Part 3 was the same except the sample function was used first, storing the breakfast and dinner recipes as vectors and sampling 1 and 3 recipes respectively.</p>
 
 </section>

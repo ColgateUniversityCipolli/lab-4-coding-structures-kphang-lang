@@ -318,14 +318,16 @@ image.url = paste("website/", image.url, sep = "")
 
 ## Part i
 Now that we have all the things we need, let's try to print the recipe. Below, I have written code to print from the objects. One by one, remove `#| eval: false` from the YAML header and add `#| echo: false` and `#| results: 'asis'`, and test. Let me know if you're stuck!
-
 **Image**
 
 ```{r}
 #| echo: false
 #| results: 'asis'
 # width="50%" shrinks the image for printing
-cat(paste('<img src="', image.url, '" style="width: 50%; height: auto;">'))
+title = html_element(recipe.item, "h1") |> html_text()
+
+cat("# ", title, "\n\n")
+cat(paste0("![](", image.url, "){width=50%}"))
 ```
 
 **Ingredients**
@@ -397,8 +399,9 @@ selected.dinners   = sample(dinner, 3)
 (selected.files = c(selected.breakfast, selected.dinners))
 ```
 
-## Garden Tomato Quiche
 ```{r}
+#| echo: false
+#| results: 'asis'
 library("rvest")
 breakfast.item = read_html("website/GardenTomatoQuiche.html")
 ingredients.section = html_element(breakfast.item, "#ingredients")
@@ -410,13 +413,14 @@ image.url = html_attr(image.element, "src")
 image.url = paste("website/", image.url, sep = "")
 ```
 
-**Image**
-
 ```{r}
 #| echo: false
 #| results: 'asis'
 # width="50%" shrinks the image for printing
-cat(paste('<img src="', image.url, '" style="width: 50%; height: auto;">'))
+title = html_element(breakfast.item, "h1") |> html_text()
+
+cat("# ", title, "\n\n")
+cat(paste0("![](", image.url, "){width=50%}"))
 ```
 
 **Ingredients**
@@ -437,8 +441,9 @@ formatted_list <- paste("1.", html_text(instructions))
 cat(formatted_list, sep = "\n") 
 ```
 
-## BBQ Chili
 ```{r}
+#| echo: false
+#| results: 'asis'
 library("rvest")
 bbq.item = read_html("website/BBQChili.html")
 ingredients.section = html_element(bbq.item, "#ingredients")
@@ -450,13 +455,15 @@ image.url = html_attr(image.element, "src")
 image.url = paste("website/", image.url, sep = "")
 ```
 
-**Image**
 
 ```{r}
 #| echo: false
 #| results: 'asis'
 # width="50%" shrinks the image for printing
-cat(paste('<img src="', image.url, '" style="width: 50%; height: auto;">'))
+title = html_element(bbq.item, "h1") |> html_text()
+
+cat("# ", title, "\n\n")
+cat(paste0("![](", image.url, "){width=50%}"))
 ```
 
 **Ingredients**
@@ -477,8 +484,9 @@ formatted_list <- paste("1.", html_text(instructions))
 cat(formatted_list, sep = "\n") 
 ```
 
-## Baked Ziti
 ```{r}
+#| echo: false
+#| results: 'asis'
 library("rvest")
 ziti.item = read_html("website/BakedZiti.html")
 ingredients.section = html_element(ziti.item, "#ingredients")
@@ -490,13 +498,14 @@ image.url = html_attr(image.element, "src")
 image.url = paste("website/", image.url, sep = "")
 ```
 
-**Image**
-
 ```{r}
 #| echo: false
 #| results: 'asis'
 # width="50%" shrinks the image for printing
-cat(paste('<img src="', image.url, '" style="width: 50%; height: auto;">'))
+title = html_element(ziti.item, "h1") |> html_text()
+
+cat("# ", title, "\n\n")
+cat(paste0("![](", image.url, "){width=50%}"))
 ```
 
 **Ingredients**
@@ -517,8 +526,9 @@ formatted_list <- paste("1.", html_text(instructions))
 cat(formatted_list, sep = "\n") 
 ```
 
-## Past And Peas
 ```{r}
+#| echo: false
+#| results: 'asis'
 library("rvest")
 pasta.item = read_html("website/PastaAndPeas.html")
 ingredients.section = html_element(pasta.item, "#ingredients")
@@ -530,13 +540,14 @@ image.url = html_attr(image.element, "src")
 image.url = paste("website/", image.url, sep = "")
 ```
 
-**Image**
-
 ```{r}
 #| echo: false
 #| results: 'asis'
 # width="50%" shrinks the image for printing
-cat(paste('<img src="', image.url, '" style="width: 50%; height: auto;">'))
+title = html_element(pasta.item, "h1") |> html_text()
+
+cat("# ", title, "\n\n")
+cat(paste0("![](", image.url, "){width=50%}"))
 ```
 
 **Ingredients**
