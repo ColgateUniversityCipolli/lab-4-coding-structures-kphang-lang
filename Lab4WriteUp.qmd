@@ -327,7 +327,7 @@ Now that we have all the things we need, let's try to print the recipe. Below, I
 title = html_element(recipe.item, "h1") |> html_text()
 
 cat("# ", title, "\n\n")
-cat(paste0("![](", image.url, "){width=50%}"))
+cat(paste("![](", image.url, "){width=50%}\n", sep = ""))
 ```
 
 **Ingredients**
@@ -420,7 +420,7 @@ image.url = paste("website/", image.url, sep = "")
 title = html_element(breakfast.item, "h1") |> html_text()
 
 cat("# ", title, "\n\n")
-cat(paste0("![](", image.url, "){width=50%}"))
+cat(paste("![](", image.url, "){width=50%}\n", sep = ""))
 ```
 
 **Ingredients**
@@ -505,7 +505,7 @@ image.url = paste("website/", image.url, sep = "")
 title = html_element(ziti.item, "h1") |> html_text()
 
 cat("# ", title, "\n\n")
-cat(paste0("![](", image.url, "){width=50%}"))
+cat(paste("![](", image.url, "){width=50%}\n", sep = ""))
 ```
 
 **Ingredients**
@@ -547,7 +547,7 @@ image.url = paste("website/", image.url, sep = "")
 title = html_element(pasta.item, "h1") |> html_text()
 
 cat("# ", title, "\n\n")
-cat(paste0("![](", image.url, "){width=50%}"))
+cat(paste("![](", image.url, "){width=50%}\n", sep = ""))
 ```
 
 **Ingredients**
